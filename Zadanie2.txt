@@ -1,0 +1,51 @@
+package ru.geekbrains;
+
+import java.util.Random;
+
+public class HomeWorkApp {
+    public static void main(String[] args) {
+        entNumber(5,7);
+        entNumber2(3);
+        isNegative(0);
+        entString("Привет ", 10);
+        entYear(2021);
+    }
+    //1----
+     public static boolean entNumber(int a, int b) {
+        int summa = a + b;
+        if (summa >= 10 && summa <= 20 ) {
+            //System.out.println("Сумма в пределах между 10 и 20 (включительно)");
+            return true;
+        } else {
+            //System.out.println("Сумма НЕ в пределах между 10 и 20 (включительно)");
+            return false;
+        }
+    }
+    //2-----
+    public static void entNumber2(int a ) {
+        if (a >= 0) {
+            System.out.println("Число "+ a +" положительное");
+        } else {
+            System.out.println("Число "+ a +" отрицательное");
+        }
+    }
+    //3 ------
+    public static boolean isNegative(int number) {
+        return number < 0;
+
+    }
+    //4----
+    public static void entString(String a, int b) {
+        for (int i = 0; i < b; i++) {
+            System.out.println(a);
+        }
+    }
+    //5-----
+    public static void entYear(int a) {
+        if ((a % 4 == 0) || (a % 100 == 0) || (a % 400 == 0) ){
+            System.out.println("Год - " + a + " является високосным");
+        }else {
+            System.out.println("Год - " + a + " НЕ является високосным");
+        }
+    }
+}
